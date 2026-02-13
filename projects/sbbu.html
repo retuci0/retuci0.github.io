@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super bert bros</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="sbbu-theme">
+    <div class="particles-container" id="particles"></div>
+    <div class="grid-overlay"></div>
+    <div class="cursor-glow"></div>
+
+    <div class="container">
+        <div class="topnav">
+            <a href="/index.html" class="nav-link"><i class="fas fa-home"></i><span>inicio</span></a>
+            <a href="/aboutme.html" class="nav-link"><i class="fas fa-user"></i><span>quién soy</span></a>
+            <a href="/projects.html" class="nav-link active"><i class="fas fa-code"></i><span>proyectos</span></a>
+            <a href="https://discordapp.com/users/806597513943056464" class="nav-link discord" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/retuci0" class="nav-link github" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="project-hero">
+                <div class="project-icon" style="font-size: 4rem; margin-bottom: 20px; color: #ff5722;">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h1 class="title-text">super bert bros</h1>
+                <div class="project-badge">SSBU en esteroides</div>
+                <p class="projects-subtitle">pedazo de juego de peleas 2D local multijugador. nintendo, no me denuncies porfa.</p>
+                <div class="button-container">
+                    <a href="https://github.com/berrota/super-bert-bros" class="social-btn github-btn" target="_blank" rel="noopener noreferrer">
+                        <div class="btn-content">
+                            <i class="fab fa-github"></i>
+                            <span>repo</span>
+                        </div>
+                        <div class="btn-hover-effect"></div>
+                    </a>
+                    
+                    <a href="https://discordapp.com/users/806597513943056464" class="social-btn" style="background-color: #ff57244d;" target="_blank" rel="noopener noreferrer">
+                        <div class="btn-content">
+                            <i class="fab fa-arrow-left"></i>
+                            <span>volver</span>
+                        </div>
+                        <div class="btn-hover-effect"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-info-circle"></i> info</h3>
+                <p>juego MUUUYYY simple, intento de emulación de Super Smash Bros (la mecánica principal, al menos), con personajes seleccionables, y ataques melee y a distancia</p>
+                <div class="feature-grid">
+                    <div class="feature-item"><i class="fas fa-users"></i> multijugador local (2 jugadores)</div>
+                    <div class="feature-item"><i class="fas fa-fist-raised"></i> 0 variedad</div>
+                    <div class="feature-item"><i class="fas fa-eye"></i> modo debug (con la B)</div>
+                    <div class="feature-item"><i class="fas fa-cog"></i> controles 100% personalizables</div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-keyboard"></i> controles (por defecto)</h3>
+                <p>puedes cambiar cualquier tecla editando el archivo <code>key_bindings.py</code>.</p>
+                <div class="control-grid">
+                    <div class="control-card">
+                        <h4><i class="fas fa-user"></i> jugador 1 (izquierda)</h4>
+                        <div class="control-item"><span>moverse</span><span class="control-key">A / D</span></div>
+                        <div class="control-item"><span>saltar</span><span class="control-key">espacio</span></div>
+                        <div class="control-item"><span>jaduquen</span><span class="control-key">E</span></div>
+                        <div class="control-item"><span>puñetazo</span><span class="control-key">W</span></div>
+                    </div>
+                    <div class="control-card">
+                        <h4><i class="fas fa-user"></i> jugador 2 (derecha)</h4>
+                        <div class="control-item"><span>moverse</span><span class="control-key">← / →</span></div>
+                        <div class="control-item"><span>saltar</span><span class="control-key">↑</span></div>
+                        <div class="control-item"><span>jaduquen</span><span class="control-key">ctrl dcho.</span></div>
+                        <div class="control-item"><span>puñetazo</span><span class="control-key">fin</span></div>
+                    </div>
+                    <div class="control-card">
+                        <h4><i class="fas fa-cog"></i> generales</h4>
+                        <div class="control-item"><span>mostrar hitboxes</span><span class="control-key">B</span></div>
+                        <div class="control-item"><span>menú pausa</span><span class="control-key">esc</span></div>
+                        <div class="control-item"><span>cerrar juego</span><span class="control-key">0</span></div>
+                        <div class="control-item"><span>pantalla completa</span><span class="control-key">F11</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-download"></i> instalación</h3>
+                
+                <div style="margin-bottom: 25px;">
+                    <h4 style="color: #4caf50; display: flex; align-items: center; gap: 8px;"><i class="fas fa-file-archive"></i> para gente normal (archivo .exe)</h4>
+                    <ol style="padding-left: 20px; line-height: 1.8;">
+                        <li>descarga el .zip más reciente desde <a href="https://github.com/berrota/super-bert-bros/releases" target="_blank">lanzamientos</a></li>
+                        <li>descomprime y guarda el .exe junto con las carpetas <code>assets</code> y <code>lang</code> en la misma carpeta.</li>
+                        <li>haz doble clic en <code>main.exe</code> (o <code>bert.exe</code>)</li>
+                    </ol>
+                </div>
+
+                <div>
+                    <h4 style="color: #2196f3; display: flex; align-items: center; gap: 8px;"><i class="fas fa-code"></i> para frikis de tropecientos de iq</h4>
+                    <div class="code-block">
+                        git clone https://github.com/berrota/super-bert-bros<br>
+                        cd super-bert-bros<br>
+                        pip install -r requirements.txt<br>
+                        python main.py
+                    </div>
+                    <p><strong>requisitos:</strong> Python 3, Git, y las dependencias de <code>requirements.txt</code>.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-heart"></i> créditos</h3>
+                <div class="credit-box">
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <div style="font-size: 3rem; color: #ff9800;"><i class="fas fa-paint-brush"></i></div>
+                        <div>
+                            <h4 style="color: #ff9800; margin-bottom: 5px;">IVZA</h4>
+                            <p style="margin-bottom: 10px;">gracias a IVZA por su animación de ataques cuerpo a cuerpo (y especiales que ya añadiré en un futuro). él hizo la de Bert y yo básicamente copié el estilo a los demás personajes.</p>
+                            <div class="button-container">
+                                <a href="https://www.youtube.com/@IVZA-d6h" class="social-btn youtube-btn" target="_blank" rel="noopener noreferrer">
+                                    <div class="btn-content">
+                                        <i class="fab fa-youtube"></i>
+                                        <span>canal de yt</span>
+                                    </div>
+                                    <div class="btn-hover-effect"></div>
+                                </a>
+                                <a href="https://discordapp.com/users/1086364163699388496" class="social-btn discord-btn" target="_blank" rel="noopener noreferrer">
+                                    <div class="btn-content">
+                                        <i class="fab fa-youtube"></i>
+                                        <span>discord: ehhjtytjg</span>
+                                    </div>
+                                    <div class="btn-hover-effect"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 20px;">pull requests: sí por favor</p>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-clipboard-list"></i> notas</h3>
+                <p>para más detalles sobre cambios, bugs conocidos y futuras características, revisa el archivo <a href="https://github.com/berrota/super-bert-bros/blob/master/VERSION.md" target="_blank">VERSION.md</a> en el repositorio.</p>
+                <div style="background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; padding: 15px; margin-top: 15px;">
+                    <i class="fas fa-exclamation-triangle" style="color: #ffc107;"></i> 
+                    <strong>Descargo:</strong> este juego es un proyecto fan-made sin ánimo de lucro. todos los derechos de las franquicias parodiadas pertenecen a sus respectivos dueños. no me demandéis, porfis.
+                </div>
+            </div>
+
+            <div class="back-home">
+                <a href="/projects.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>volver a proyectos</span>
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2024 el prepu · Juego creado con Python, cafeína y mucha falta de sueño.</p>
+                <div class="footer-links">
+                    <a href="/projects.html" class="footer-link">Proyectos</a>
+                    <span class="separator">•</span>
+                    <a href="/aboutme.html" class="footer-link">Sobre mí</a>
+                    <span class="separator">•</span>
+                    <a href="/index.html" class="footer-link">Inicio</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>
+        document.querySelectorAll('.control-key').forEach(el => {
+            el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.1)'; });
+            el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)'; });
+        });
+    </script>
+</body>
+</html>

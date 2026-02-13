@@ -1,0 +1,570 @@
+.about-hero {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.terminal-header {
+    background: rgba(26, 26, 26, 0.7);
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27ca3f; }
+
+.terminal-title {
+    color: #aaa;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.terminal-output {
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 60px;
+    font-family: 'Ubuntu Mono', monospace;
+    position: relative;
+}
+
+.terminal-output .cursor {
+    animation: blink 1s infinite;
+    color: #27ca3f;
+}
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff5f56, #ffbd2e, #27ca3f);
+}
+
+.bio-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.3;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.bio-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.bio-tagline {
+    color: #aaa;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.bio-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.bio-text {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.bio-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.bio-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.bio-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.bio-list i {
+    color: var(--primary-color);
+}
+
+
+.section-header {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.section-header i {
+    color: var(--primary-color);
+}
+
+.section-divider {
+    height: 2px;
+    width: 100px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    border-radius: 1px;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.skill-card.python::before {
+    background: linear-gradient(90deg, #3776ab, #ffde57);
+}
+
+.skill-card.c::before {
+    background: linear-gradient(90deg, #00599c, #004482);
+}
+
+.skill-card.java::before {
+    background: linear-gradient(90deg, #007396, #ed8b00);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.skill-header i {
+    font-size: 2.5rem;
+}
+
+.skill-card.python .skill-header i {
+    color: #3776ab;
+}
+
+.skill-card.c .skill-header i {
+    color: #00599c;
+}
+
+.skill-card.java .skill-header i {
+    color: #007396;
+}
+
+.skill-header h4 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.skill-level {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease-in-out;
+}
+
+.skill-card.python .skill-progress {
+    background: linear-gradient(90deg, #3776ab, #ffde57);
+}
+
+.skill-card.c .skill-progress {
+    background: linear-gradient(90deg, #00599c, #004482);
+}
+
+.skill-card.java .skill-progress {
+    background: linear-gradient(90deg, #007396, #ed8b00);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+
+.arch-section {
+    margin-bottom: 50px;
+}
+
+.arch-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.arch-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #1793d1, #0e639c);
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(23, 147, 209, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.arch-content {
+    margin-top: 40px;
+}
+
+.arch-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .arch-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+.arch-specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.spec-label {
+    display: block;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.spec-value {
+    display: block;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.arch-philosophy h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.arch-philosophy p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.arch-command {
+    background: rgba(10, 10, 10, 0.8);
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Ubuntu Mono', monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arch-command code {
+    color: #27ca3f;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+}
+
+.copy-btn {
+    color: #aaa;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.copy-btn:hover {
+    color: var(--text-color);
+}
+
+.arch-achievement {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 193, 7, 0.05));
+    border-radius: 10px;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    color: #ffc107;
+}
+
+.achievement-content h5 {
+    color: #ffc107;
+    margin-bottom: 5px;
+}
+
+.achievement-content p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.daily-section {
+    margin-bottom: 50px;
+}
+
+.daily-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.tool-card h5 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.tool-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tool-list li {
+    color: #aaa;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tool-list li:last-child {
+    border-bottom: none;
+}
+
+.quote-section {
+    margin: 50px 0;
+}
+
+.quote-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.quote-card .fa-quote-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--primary-color);
+    opacity: 0.3;
+    font-size: 2rem;
+}
+
+.quote-card .fa-quote-right {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: var(--primary-color);
+    opacity: 0.3;
+    font-size: 2rem;
+}
+
+.quote-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    color: #aaa;
+    font-size: 0.9rem;
+}

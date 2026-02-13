@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sputnik</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="sputnik-theme">
+    <div class="particles-container" id="particles"></div>
+    <div class="grid-overlay"></div>
+    <div class="cursor-glow"></div>
+    
+    <div class="container">
+        <div class="topnav">
+            <a href="../index.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>inicio</span>
+            </a>
+            <a href="../aboutme.html" class="nav-link">
+                <i class="fas fa-user"></i>
+                <span>quien soy</span>
+            </a>
+            <a href="../projects.html" class="nav-link active">
+                <i class="fas fa-code"></i>
+                <span>proyectos</span>
+            </a>
+            <a href="https://discordapp.com/users/806597513943056464" class="nav-link discord" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://github.com/retuci0" class="nav-link github" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="project-hero">
+                <div class="project-icon" style="font-size: 4rem; margin-bottom: 20px; color: #228dff;">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h1 class="title-text">sputnik</h1>
+                <div class="project-badge">jenny's mod 2 100% real</div>
+                <p class="projects-subtitle">mod de "utilidad" de fabric que añade "mejoras QOL"</p>
+                <div class="button-container">
+                    <a href="https://github.com/retuci0/sputnik" class="social-btn github-btn" target="_blank" rel="noopener noreferrer">
+                        <div class="btn-content">
+                            <i class="fab fa-github"></i>
+                            <span>repo</span>
+                        </div>
+                        <div class="btn-hover-effect"></div>
+                    </a>
+                    
+                    <a href="/projects.html" class="social-btn" style="background-color: #ff57244d;" target="_blank" rel="noopener noreferrer">
+                        <div class="btn-content">
+                            <i class="fab fa-arrow-left"></i>
+                            <span>volver</span>
+                        </div>
+                        <div class="btn-hover-effect"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-download"></i> instalación</h3>
+                
+                <div class="install-method">
+                    <h4><i class="fas fa-user"></i> para gente normal:</h4>
+                    <ol style="padding-left: 20px; line-height: 1.8;">
+                        <li>ir a <a href="https://github.com/retuci0/sputnik/releases" target="_blank">lanzamientos</a></li>
+                        <li>seleccionar la versión más reciente</li>
+                        <li>descargar el archivo .jar</li>
+                        <li>moverlo a tu directorio de mods (probablemente <code>%appdata%/.minecraft/mods</code>)</li>
+                    </ol>
+                    <br>
+                    <p><strong>requisitos:</strong> Minecraft <code>1.21.11</code> y Fabric <code>0.17.3</code></p>
+                </div>
+                
+                <div class="install-method">
+                    <h4><i class="fas fa-brain"></i> para frikis de 200 de IQ:</h4>
+                    <div class="code-block">
+                        git clone https://github.com/retuci0/sputnik<br>
+                        cd sputnik<br>
+                        gradlew build  # Windows<br>
+                        # o<br>
+                        chmod +x gradlew && ./gradlew build  # Linux/Mac
+                    </div>
+                    <p>El archivo .jar resultante estará en <code>/build/libs/sputnik-X.X.jar</code>.</p>
+                </div>
+                
+                <div class="warning-box">
+                    <p><i class="fas fa-exclamation-triangle"></i> es posible que haya problemas al usarlo junto a otros mods, especialmente junto a otros clientes, pues pueden conflictar entre ellos.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-gamepad"></i> uso</h3>
+                <h4>prefijo de comandos por defecto: <kbd>$</kbd> (se autocompletan)</h4>
+                <br>
+                <h4>atajos de teclado por defecto:</h4>
+                <div class="control-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>acción</th>
+                                <th>tecla</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>abrir interfaz</td>
+                                <td><kbd>shift dcho.</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>abrir editor del HUD</td>
+                                <td><kbd>pág. arriba</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>cámara libre</td>
+                                <td><kbd>v</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>perspectiva libre</td>
+                                <td><kbd>b</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>brilli brilli</td>
+                                <td><kbd>k</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>zoom</td>
+                                <td><kbd>f</kbd></td>
+                            </tr>
+                            <tr>
+                                <td>precoz</td>
+                                <td><kbd>F6</kbd></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <p><i class="fas fa-info-circle"></i> asígnales <kbd>ESC</kbd> para desactivar sus atajos de teclado.</p>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-mouse-pointer"></i> interfaz</h3>
+                
+                <div class="control-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>acción</th>
+                                <th>método</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>activar / desactivar módulos</td>
+                                <td>clic izq.</td>
+                            </tr>
+                            <tr>
+                                <td>abrir ajustes de módulo</td>
+                                <td>clic dcho.</td>
+                            </tr>
+                            <tr>
+                                <td>Mover marcos</td>
+                                <td>clic izq. + arrastrar</td>
+                            </tr>
+                            <tr>
+                                <td>expandir / contraer marco</td>
+                                <td>clic dcho. en la cabeza del marco</td>
+                            </tr>
+                            <tr>
+                                <td>cerrar marco</td>
+                                <td>clic dcho. en la cabeza del marco</td>
+                            </tr>
+                            <tr>
+                                <td>modificar ajustes</td>
+                                <td>clic izq.</td>
+                            </tr>
+                            <tr>
+                                <td>restablecer ajustes</td>
+                                <td>shift + clic dcho.</td>
+                            </tr>
+                            <tr>
+                                <td>ver descripción</td>
+                                <td>pasar cursor sobre módulo / ajuste</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4 style="margin-top: 25px;"><i class="fas fa-lightbulb"></i> protips:</h4> <br>
+                <ul style="padding-left: 20px; line-height: 1.8;">
+                    <li><strong>shift</strong> mientras pasas el puntero sobre ajustes de modo para ver los modos disponibles</li>
+                    <li><strong>clic dcho.</strong> para ciclar hacia atrás en ajustes de modo</li>
+                    <li><strong>rueda del ratón</strong> para mover la interfaz verticalmente</li>
+                    <li><strong>shift + rueda del ratón </strong> (presionar) para mover todos los marcos a un rango visible</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-images"></i> capturas</h3>
+                
+                <div class="screenshot-grid">
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/ui.png" alt="interfaz">
+                        <div class="screenshot-caption">interfaz</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/nametags.png" alt="nametags">
+                        <div class="screenshot-caption">nametags</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/chatplus.png" alt="chat plus">
+                        <div class="screenshot-caption">chat plus</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/crits.png" alt="críticos">
+                        <div class="screenshot-caption">críticos</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/fullbright.png" alt="brilli brilli">
+                        <div class="screenshot-caption">brilli brilli</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/hud.png" alt="hud">
+                        <div class="screenshot-caption">hud</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/hudeditor.png" alt="editor del hud">
+                        <div class="screenshot-caption">editor del hud</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="https://raw.githubusercontent.com/retuci0/sputnik/master/screenshots/colorpicker.png" alt="selector de colores">
+                        <div class="screenshot-caption">selector de colores</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-thumbs-up"></i> mods recomendados</h3>
+                <p>Mods que recomiendo usar junto a este:</p>
+                
+                <div class="mod-grid">
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/fabric-api/" target="_blank">
+                            <i class="fas fa-cube"></i> fabric api
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">(necesario)</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/sodium" target="_blank">
+                            <i class="fas fa-tachometer-alt"></i> sodium
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">mejora rendimiento</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/viafabricplus" target="_blank">
+                            <i class="fas fa-server"></i> viafabricplus
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">conecta a otras versiones</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/xaeros-world-map/" target="_blank">
+                            <i class="fas fa-map"></i> waero's world map
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">mapa del mundo</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/xaeros-minimap/" target="_blank">
+                            <i class="fas fa-map-marker-alt"></i> xaero's minimap
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">minimapa</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/modmenu" target="_blank">
+                            <i class="fas fa-list"></i> mod menu
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">lista y ajustes de mods</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/iris" target="_blank">
+                            <i class="fas fa-eye"></i> iris
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">shaders</p>
+                    </div>
+                    <div class="mod-card">
+                        <a href="https://modrinth.com/mod/lambdynamiclights" target="_blank">
+                            <i class="fas fa-lightbulb"></i> lambdynamiclights
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">iluminación dinámica</p>
+                    </div>
+                    <div class="mod-card">
+                        <a hrhef="https://github.com/cabaletta/baritone" target="_blank">
+                            <i class="fas fa-map"></i> baritone
+                        </a>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: #aaa;">google maps</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>©n't 2025 el prepu.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">privacidad</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="footer-link">términos</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="footer-link">contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/sputnik.js"></script>
+</body>
+</html>

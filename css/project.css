@@ -1,0 +1,316 @@
+.project-hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(10,10,10,0.95));
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 87, 36, 0.302);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,87,34,0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.project-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.content-section {
+    background: rgba(26,26,26,0.7);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid;
+    position: relative;
+    z-index: 1;
+}
+
+.content-section h3 {
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.code-block {
+    background: rgba(10,10,10,0.9);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 20px 0;
+    border: 1px solid;
+    overflow-x: auto;
+}
+
+
+.sbbu-theme {
+    --primary: #ff9800;
+    --badge-gradient: linear-gradient(135deg, #ff5722, #ff9800);
+    --badge-shadow: 0 4px 15px rgba(255,87,34,0.4);
+    --section-border: rgba(255,87,34,0.2);
+    --code-border: rgba(255,87,34,0.3);
+}
+
+.sbbu-theme .project-badge {
+    background: var(--badge-gradient);
+    box-shadow: var(--badge-shadow);
+}
+
+.sbbu-theme .content-section {
+    backdrop-filter: blur(10px);
+    border-color: var(--section-border);
+}
+
+.sbbu-theme .content-section h3 {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.sbbu-theme .code-block {
+    border-color: var(--code-border);
+}
+
+
+.control-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.control-card {
+    background: rgba(255,87,34,0.05);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255,87,34,0.2);
+}
+
+.control-card h4 {
+    color: #ff9800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.control-item:last-child {
+    border-bottom: none;
+}
+
+.control-key {
+    background: rgba(0,0,0,0.5);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #ffcc80;
+    border: 1px solid #ff9800;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    background: rgba(255,152,0,0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff9800;
+}
+
+.feature-item i {
+    color: #ff9800;
+    margin-right: 8px;
+}
+
+.credit-box {
+    background: rgba(255,193,7,0.05);
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.sputnik-theme {
+    --primary: #1793d1;
+    --badge-gradient: linear-gradient(135deg, #1793d1, #0e639c);
+    --badge-shadow: 0 4px 15px rgba(23,147,209,0.3);
+    --section-border: rgba(255,255,255,0.1);
+    --code-border: rgba(255,255,255,0.1);
+}
+
+.sputnik-theme .project-badge {
+    background: var(--badge-gradient);
+    box-shadow: var(--badge-shadow);
+}
+
+.sputnik-theme .content-section {
+    border-color: var(--section-border);
+    /* no backdrop-filter */
+}
+
+.sputnik-theme .content-section h3 {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.sputnik-theme .code-block {
+    border-color: var(--code-border);
+}
+
+/* Sputnik unique components */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.screenshot-item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.screenshot-caption {
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.control-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.control-table th,
+.control-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.control-table th {
+    background: rgba(114,137,218,0.2);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.control-table tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.mod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.mod-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+.mod-card:hover {
+    background: rgba(255,255,255,0.07);
+    transform: translateY(-3px);
+}
+
+.mod-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mod-card a:hover {
+    text-decoration: underline;
+}
+
+.warning-box {
+    background: rgba(255,87,34,0.1);
+    border-left: 4px solid #ff5722;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.install-method {
+    margin-bottom: 30px;
+}
+
+.install-method h4 {
+    color: #4caf50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .control-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .control-table {
+        font-size: 0.9rem;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+}
