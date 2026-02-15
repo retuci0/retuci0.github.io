@@ -152,3 +152,27 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.style.backgroundPosition = `0px ${scrolled * 0.5}px`;
     });
 });
+
+
+// mostar IP
+async function getIP() {
+  const url = "/php/ip.php";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      return ("puta, un error")
+    }
+    return response.text()
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+async function showIP() {
+    const ip = await getIP();
+    document.querySelectorAll(".ip").forEach(
+        (element) => element.textContent = ip
+    );
+}
+
+showIP();

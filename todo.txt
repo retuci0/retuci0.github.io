@@ -1,8 +1,7 @@
 me la pela que se pueda ver
 
 - arreglar hovering de botones
-- rcon bot (proyectos)
-- mostrar ip
 - server
 - arreglar botón de volver a inicio: about.css, styles.css
-- proyecto rcon-bot
+- fix relative paths
+- project page para cada proyecto

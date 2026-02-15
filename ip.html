@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ipv4</title>
+</head>
+<body>
+    <h1><span id="ip">cargando...</span></h1>
+    <script>
+        fetch('php/ip.php')
+            .then(response => response.text())
+            .then(ip => document.getElementById('ip').textContent = ip)
+            .catch(err => document.getElementById('ip').textContent = 'error');
+    </script>
+</body>
+</html>
