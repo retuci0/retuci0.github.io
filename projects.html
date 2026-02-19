@@ -17,23 +17,30 @@
     
     <div class="container">
         <div class="topnav">
-            <a href="index.html" class="nav-link">
+            <a href="/index.html" class="nav-link">
                 <i class="fas fa-home"></i>
                 <span>inicio</span>
             </a>
-            <a href="aboutme.html" class="nav-link">
+            <a href="/aboutme.html" class="nav-link">
                 <i class="fas fa-user"></i>
-                <span>quien soy</span>
+                <span>quién soy</span>
             </a>
-            <a href="projects.html" class="nav-link active">
+            <a href="/projects.html" class="nav-link active">
                 <i class="fas fa-code"></i>
                 <span>proyectos</span>
+            </a>
+            <a href="/server.html" class="nav-link">
+                <i class="fas fa-cube"></i>
+                <span>server</span>
             </a>
             <a href="https://discordapp.com/users/806597513943056464" class="nav-link discord" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-discord"></i>
             </a>
             <a href="https://github.com/retuci0" class="nav-link github" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-github"></i>
+            </a>
+            <a href="matrix:u/retucio:matrix.org" class="nav-link matrix" target="_blank" rel="noopener noreferrer">
+                <p>[m]</p>  <!-- FA no tiene un icono para Matrix :( -->
             </a>
         </div>
 
@@ -110,6 +117,32 @@
                             <i class="fas fa-external-link-alt"></i> detalles
                         </a>
                         <a href="https://github.com/retuci0/sputnik" class="project-link github-link" target="_blank">
+                            <i class="fab fa-github"></i> src
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card python featured" data-tech="python">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>rcon bot</h3>
+                            <span class="project-badge featured-badge">destacado</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        bot de discord.py simple que gestiona un server de minecraft vía rcon
+                    </p>
+                    <div class="project-tags">
+                        <span class="tech-tag python-tag">python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/rconbot.html" class="project-link detail-link">
+                            <i class="fas fa-external-link-alt"></i> detalles
+                        </a>
+                        <a href="https://github.com/retuci0/rcon-bot" class="project-link github-link" target="_blank">
                             <i class="fab fa-github"></i> src
                         </a>
                     </div>
@@ -255,24 +288,25 @@
                     </div>
                 </div>
 
-                <div class="project-card python" data-tech="python">
+
+                <div class="project-card c" data-tech="c">
                     <div class="project-header">
                         <div class="project-icon">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-message"></i>
                         </div>
                         <div class="project-title">
-                            <h3>rcon bot</h3>
-                            <span class="project-badge featured-badge">server de minecraft</span>
+                            <h3>retchat</h3>
+                            <span class="project-badge bot-badge">mensajería</span>
                         </div>
                     </div>
                     <p class="project-description">
-                        bot de discord.py simple que gestiona un server de minecraft vía rcon
+                        cli de mensajería TCP/IP, con encripción básica
                     </p>
                     <div class="project-tags">
-                        <span class="tech-tag python-tag">python</span>
+                        <span class="tech-tag c-tag">c</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/retuci0/rcon-bot" class="project-link github-link" target="_blank">
+                        <a href="https://github.com/retuci0/retchat" class="project-link github-link" target="_blank">
                             <i class="fab fa-github"></i> src
                         </a>
                     </div>
@@ -282,22 +316,22 @@
             <div class="projects-stats">
                 <div class="stat-card">
                     <i class="fas fa-code-branch"></i>
-                    <span class="stat-number">9</span>
+                    <span class="stat-number" id="project-count"></span>
                     <span class="stat-label">proyectos</span>
                 </div>
                 <div class="stat-card">
                     <i class="fab fa-python"></i>
-                    <span class="stat-number">5</span>
+                    <span class="stat-number" id="python-count"></span>
                     <span class="stat-label">python</span>
                 </div>
                 <div class="stat-card">
                     <i class="fab fa-java"></i>
-                    <span class="stat-number">3</span>
+                    <span class="stat-number" id="java-count"></span>
                     <span class="stat-label">java</span>
                 </div>
                 <div class="stat-card">
                     <i class="fas fa-microchip"></i>
-                    <span class="stat-number">1</span>
+                    <span class="stat-number" id="c-count"></span>
                     <span class="stat-label">c</span>
                 </div>
             </div>

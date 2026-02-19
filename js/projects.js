@@ -1,13 +1,10 @@
-// Project filtering functionality
 document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
     
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             button.classList.add('active');
             
             const filter = button.getAttribute('data-filter');
@@ -55,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Add animation to project cards on page load
     projectCards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
@@ -67,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100 + index * 100);
     });
     
-    // Add hover effect to project cards
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             const icon = card.querySelector('.project-icon i');
@@ -85,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Add particle effect to tech tags
     document.querySelectorAll('.tech-tag').forEach(tag => {
         tag.addEventListener('mouseenter', () => {
             tag.style.transform = 'translateY(-2px)';
@@ -98,3 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.getElementById("project-count").textContent = document.querySelectorAll(".project-card").length
+document.getElementById("python-count").textContent = document.querySelectorAll(".python").length
+document.getElementById("java-count").textContent = document.querySelectorAll(".java").length
+document.getElementById("c-count").textContent = document.querySelectorAll(".c").length

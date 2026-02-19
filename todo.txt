@@ -1,7 +1,8 @@
 me la pela que se pueda ver
 
+- project page para cada proyecto
+- https (mecachis)
+- mouse light repell particles
 - arreglar hovering de botones
-- server
 - arreglar botón de volver a inicio: about.css, styles.css
 - fix relative paths
-- project page para cada proyecto

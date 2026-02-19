@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>bot</title>
+    <style>
+        .project-hero {
+            text-align: center;
+            padding: 60px 20px 30px;
+            background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(10,10,10,0.95));
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(114,137,218,0.3);
+        }
+        .project-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7289da, #4caf50);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(114,137,218,0.4);
+        }
+        .content-section {
+            background: rgba(26,26,26,0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(114,137,218,0.2);
+        }
+        .content-section h3 {
+            color: #7289da;
+            border-bottom: 2px solid #7289da;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .code-block {
+            background: rgba(10,10,10,0.9);
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Ubuntu Mono', monospace;
+            margin: 20px 0;
+            border: 1px solid #7289da;
+            overflow-x: auto;
+        }
+        .cmd-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            overflow: hidden;
+            margin:20px 0;
+        }
+        .cmd-table th {
+            background: rgba(114,137,218,0.2);
+            color: #7289da;
+            padding: 12px;
+            text-align: left;
+        }
+        .cmd-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .cmd-table tr:hover { background: rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    <div class="grid-overlay"></div>
+    <div class="cursor-glow"></div>
+
+    <div class="container">
+        <div class="topnav">
+            <a href="/index.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>inicio</span>
+            </a>
+            <a href="/aboutme.html" class="nav-link">
+                <i class="fas fa-user"></i>
+                <span>quién soy</span>
+            </a>
+            <a href="/projects.html" class="nav-link">
+                <i class="fas fa-code"></i>
+                <span>proyectos</span>
+            </a>
+            <a href="/server.html" class="nav-link">
+                <i class="fas fa-cube"></i>
+                <span>server</span>
+            </a>
+            <a href="https://discordapp.com/users/806597513943056464" class="nav-link discord" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://github.com/retuci0" class="nav-link github" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="matrix:u/retucio:matrix.org" class="nav-link matrix" target="_blank" rel="noopener noreferrer">
+                <p>[m]</p>  <!-- FA no tiene un icono para Matrix :( -->
+            </a>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="project-hero">
+                <div class="project-icon" style="font-size:4rem;"><i class="fas fa-robot" style="color:#7289da;"></i></div>
+                <h1 class="title-text">bot rcon</h1>
+                <div class="project-badge">discord.py · minecraft · rcon</div>
+                <p class="projects-subtitle">bot de discord que gestiona un servidor de minecraft vía RCON.</p>
+                <div class="project-links" style="margin-top:20px;">
+                    <a href="https://github.com/retuci0/rcon-bot" class="social-btn github-btn" target="_blank"><i class="fab fa-github"></i> repositorio</a>
+                    <a href="/projects.html" class="social-btn" style="background:rgba(255,255,255,0.1);"><i class="fas fa-arrow-left"></i> volver</a>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-download"></i> instalación</h3>
+                <div class="code-block">
+                    git clone https://github.com/retuci0/rcon-bot.git <br>
+                    cd rcon-bot <br>
+                    python -m venv .venv <br>
+                    source .venv/bin/activate  # linux <br>
+                    .\.venv\Scripts\activate  # windows <br>
+                    pip install -r requirements.txt <br>
+                    python bot.py
+                </div>
+                <p><i class="fas fa-info-circle"></i> <strong>requisitos:</strong> python ≥ 3.12</p>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-cog"></i> configuración</h3>
+                <p>crea un archivo <code>config.yaml</code> en la raíz:</p>
+                <div class="code-block">
+                    discord: <br>
+                    &nbsp; token: "TU_TOKEN" <br>
+                    &nbsp; prefix: "!" <br>
+                    &nbsp; admin_users: [806597513943056464] <br>
+                    &nbsp; allowed_channels: ["general"] <br>
+                    <br>
+                    server: <br>
+                    &nbsp; directory: "/srv/minecraft/mc-server" <br>
+                    &nbsp; file: "paper.jar" <br>
+                    &nbsp; script: "/srv/minecraft/bot/start.sh" <br>
+                    &nbsp; session: "server" <br>
+                    &nbsp; jvmargs: "-Xmx2G -Xms2G" <br>
+                    &nbsp; inactivity_time: 300 <br>
+                    <br>
+                    rcon: <br>
+                    &nbsp; host: "127.0.0.1" <br>
+                    &nbsp; port: 25575 <br>
+                    &nbsp; password: "CONTRASEÑA_RCON"
+                </div>
+                <p>acuérdate de activar la RCON en <code>server.properties</code>:</p>
+                <div class="code-block">
+                    enable-rcon=true <br>
+                    rcon.password=CONTRASEÑA_RCON <br>
+                    rcon.port=25575
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-terminal"></i> comandos</h3>
+                <table class="cmd-table">
+                    <thead><tr><th>comando</th><th>qué pollas hace</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>!abrir</code></td><td>inicia el servidor</td></tr>
+                        <tr><td><code>!cerrar</code></td><td>detiene el servidor</td></tr>
+                        <tr><td><code>!estado</code></td><td>muestra online/offline, jugadores, TPS</td></tr>
+                        <tr><td><code>!ip</code></td><td>IP pública y puertos</td></tr>
+                        <tr><td><code>!comando ...</code></td><td>ejecuta un comando de consola</td></tr>
+                        <tr><td><code>!recargar</code></td><td>recarga config.yaml sin reiniciar</td></tr>
+                    </tbody>
+                </table>
+                <p><i class="fas fa-shield-alt"></i> los comandos <code>!cerrar</code> y <code>!comando</code> solo para administradores.</p>
+            </div>
+
+            <div class="content-section">
+                <h3><i class="fas fa-terminal"></i> consola del servidor</h3>
+                <p>si necesitas acceder a la consola directamente (tmux):</p>
+                <div class="code-block">tmux attach -t server   # el nombre debe coincidir con el de la config.</div>
+                <p>para salir sin cerrar: <code>Ctrl+B, D</code></p>
+            </div>
+
+            <div class="content-section" style="border-left-color:#4caf50;">
+                <h3><i class="fas fa-lightbulb"></i> funcionamiento</h3>
+                <p>el bot usa <strong>tmux</strong> para manejar el proceso del servidor y <strong>RCON</strong> para ejecutar comandos mientras está online.</p>
+            </div>
+
+            <div style="text-align:center; margin:40px 0;">
+                <a href="/projects.html" class="social-btn" style="background:rgba(114,137,218,0.2);"><i class="fas fa-arrow-left"></i> todos los proyectos</a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>©n't 2025 el prepu.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">privacidad</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="footer-link">términos</a>
+                    <span class="separator">•</span>
+                    <a href="javascript:alert('por discord o matrix, respondo rápido')" class="footer-link">contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

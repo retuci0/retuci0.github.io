@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/server.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>serber epiko</title>
+</head>
+<body>
+    <div class="particles-container" id="particles"></div>
+    <div class="grid-overlay"></div>
+    <div class="cursor-glow"></div>
+    
+    <div class="container">
+        <div class="topnav">
+            <a href="index.html" class="nav-link">
+                <i class="fas fa-home"></i>
+                <span>inicio</span>
+            </a>
+            <a href="aboutme.html" class="nav-link">
+                <i class="fas fa-user"></i>
+                <span>quién soy</span>
+            </a>
+            <a href="projects.html" class="nav-link">
+                <i class="fas fa-code"></i>
+                <span>proyectos</span>
+            </a>
+            <a href="server.html" class="nav-link active">
+                <i class="fas fa-cube"></i>
+                <span>server</span>
+            </a>
+            <a href="https://discordapp.com/users/806597513943056464" class="nav-link discord" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://github.com/retuci0" class="nav-link github" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="matrix:u/retucio:matrix.org" class="nav-link matrix" target="_blank">
+                <span style="font-weight: bold;">[m]</span>
+            </a>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="server-hero">
+                <h1 class="title centered">
+                    <span class="title-text">serber epiko</span>
+                    <div class="title-underline"></div>
+                </h1>
+            </div>
+
+            <div class="status-box" id="statusBox">
+                <div class="status-indicator">
+                    <div class="status-led" id="statusLed"></div>
+                    <span class="status-text" id="statusText">cargando...</span>
+                </div>
+                <div class="status-details" id="statusDetails">
+                    <i class="fas fa-sync-alt fa-spin"></i> consultando...
+                </div>
+            </div>
+
+            <div class="badge-grid">
+                <span class="badge"><i class="fas fa-cube"></i> Java & Bedrock</span>
+                <span class="badge"><i class="fas fa-tag"></i> 1.21.11</span>
+                <span class="badge"><i class="fas fa-leaf"></i> vanilla</span>
+            </div>
+
+            <div class="server-card">
+                <h3><i class="fas fa-info-circle"></i> info</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    un SMP (semi)vanilla para tanto <strong>Bedrock</strong> como <strong>Java</strong>. la versión es <strong>1.21.11</strong>. 
+                </p>
+                <p style="margin-top: 15px;">
+                    lo único que lo hace semivanilla es que hay un plugin de tpa hecho por mí, pero quitando eso 100% vanilla.
+                </p>
+            </div>
+
+            <div class="abrir-note">
+                <h4><i class="fas fa-power-off"></i> servidor apagado por defecto</h4>
+                <p>para ahorrar recursos, el servidor está <strong>apagado</strong> la mayor parte del tiempo. si quieres jugar, usa el comando <strong>!abrir</strong> en el Discord para que el bot lo encienda.</p>
+            </div>
+
+            <div class="server-card">
+                <h3><i class="fas fa-star"></i> características</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-globe"></i>
+                        <h4>crossplay</h4>
+                        <p>mediante Geyser</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-leaf"></i>
+                        <h4>semivanilla</h4>
+                        <p>tpa, etc.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>rendimiento horroroso</h4>
+                        <p>tengo solo 4GB de RAM</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>24/7 (casi)</h4>
+                        <p>hosteado desde mi casa, a veces se cae :P</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discord-box">
+                <div class="info">
+                    <h4><i class="fab fa-discord"></i> IP dinámica</h4>
+                    <p>mi IP pública cambia cada tanto, así que uso un bot de Discord para compartirla.</p>
+                    <div class="ip-command">!ip</div>
+                    <p style="margin-top: 10px; color: #aaa;">únete al Discord y escribe <strong>!ip</strong> en <i>#momazos-grasosos</i> para recibir la IP actual.</p>
+                </div>
+                <a href="https://discord.gg/73kP644XWe" class="btn" target="_blank">
+                    <i class="fab fa-discord"></i> unirse al Discord
+                </a>
+            </div>
+
+            <div class="note">
+                <i class="fas fa-exclamation-triangle" style="color: #ffc107; margin-right: 10px;"></i>
+                <strong>no hay reglas:</strong> si te ofendes rápido, no te unas, copito de nieve.
+            </div>
+
+            <div style="background: rgba(114,137,218,0.05); border-radius: 12px; padding: 20px; margin: 30px 0; text-align: center;">
+                <i class="fas fa-question-circle" style="color: #7289da; font-size: 2rem; margin-bottom: 10px;"></i>
+                <p>¿dudas? mándame un MD por Discord o Matrix, respondo rápido</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 tu madre inc.; ningún derecho reservado :P</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">privacidad</a>
+                    <span class="separator">•</span>
+                    <a href="#" class="footer-link">términos</a>
+                    <span class="separator">•</span>
+                    <a href="javascript:alert('por discord o matrix')" class="footer-link">contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        async function checkStatus() {
+            const led = document.getElementById('statusLed');
+            const text = document.getElementById('statusText');
+            const details = document.getElementById('statusDetails');
+
+            try {
+                const response = await fetch('php/status.php?_=' + Date.now());
+                const data = await response.json();
+
+                if (data.online) {
+                    led.className = 'status-led online';
+                    text.innerHTML = '🟢 ONLINE';
+                    details.innerHTML = '<i class="fas fa-check-circle"></i> el server está abierto';
+                } else {
+                    led.className = 'status-led offline';
+                    text.innerHTML = '🔴 OFFLINE';
+                    details.innerHTML = '<i class="fas fa-exclamation-circle"></i> cerrado (usa !abrir en Discord)';
+                }
+            } catch (e) {
+                led.className = 'status-led offline';
+                text.innerHTML = '⚠️ ERROR';
+                details.innerHTML = '<i class="fas fa-bug"></i> no se pudo consultar el estado';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkStatus();
+            setInterval(checkStatus, 30000);
+        });
+    </script>
+</body>
+</html>
